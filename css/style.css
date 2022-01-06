@@ -1,0 +1,161 @@
+:root {
+  --text-color: white;
+  --warna-navbar: #001e6c;
+  --warna-body: #5089c6;
+  --warna-dasar: #035397;
+}
+
+html[data-color-mode="dark"] {
+  --text-color: #fff;
+  --warna-navbar: #111;
+  --warna-body: #444;
+  --warna-dasar: #333;
+  --warna-font: #fff;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: var(--warna-body);
+  color: var(--text-color);
+}
+
+.navbar-brand {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  background-color: var(--warna-navbar);
+}
+
+.tombol {
+  background-color: var(--warna-body);
+  border-radius: 20px;
+  color: var(--warna-font);
+}
+
+.jumbotron {
+  overflow-x: hidden;
+  height: 663px;
+  padding-top: 7rem;
+  background-color: var(--warna-dasar);
+}
+
+.jumbotron .btn {
+  background-color: var(--warna-navbar);
+  border-radius: 20px;
+}
+
+.jumbotron img {
+  cursor: zoom-in;
+  transition: 0.5s;
+}
+
+.jumbotron img:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.jumbotron h1 .jumbotron h6 {
+  text-shadow: 1px 1px 10px rgb(0, 0, 0, 0.5);
+}
+
+.jumbotron h6 {
+  width: max-content;
+  height: 20px;
+  text-align: center;
+  align-content: center;
+  padding-right: 15px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.jumbotron h6::before,
+.jumbotron h6::after {
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.jumbotron h6::before {
+  background-color: var(--warna-dasar);
+  animation: typing 6s steps(39) 1s infinite alternate;
+}
+
+.jumbotron h6::after {
+  width: 0.135em;
+  background: var(--text-color);
+  animation: typing 6s steps(39) 1s infinite alternate,
+    blink 150ms steps(39) infinite alternate;
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+#about img {
+  overflow-x: hidden;
+  transition: 0.5s;
+  cursor: zoom-in;
+}
+
+#about img:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+#projects {
+  background-color: var(--warna-dasar);
+}
+
+#projects .card {
+  background-color: var(--warna-body);
+  border-radius: 10px;
+}
+
+#projects .card h5 {
+  color: var(--warna-navbar);
+}
+
+#projects .card .btn {
+  background-color: var(--warna-navbar);
+}
+
+#projects .card img {
+  border-radius: 10px;
+}
+
+#resume .skill-section .progress-bar {
+  background-color: var(--warna-navbar);
+}
+
+section {
+  padding-top: 5rem;
+}
+
+#contact {
+  padding-bottom: 20px;
+  color: var(--text-color);
+  background-color: var(--warna-dasar);
+}
+
+#contact button {
+  background-color: var(--warna-navbar);
+}
+
+footer {
+  background-color: var(--warna-navbar);
+}
